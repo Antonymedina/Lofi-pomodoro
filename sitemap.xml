@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <!-- Página Principal -->
+   <url>
+      <loc>https://www.lofipomodoro.com/</loc>
+      <lastmod>2024-11-19</lastmod>
+      <priority>1.0</priority>
+      <changefreq>daily</changefreq>
+   </url>
+   <!-- Página de Créditos -->
+   <url>
+      <loc>https://www.lofipomodoro.com/credits</loc>
+      <lastmod>2024-11-19</lastmod>
+      <priority>0.7</priority>
+      <changefreq>monthly</changefreq>
+   </url>
+   <!-- Enlaces a las canciones (opcional) -->
+   <url>
+      <loc>https://uppbeat.io/t/adi-goldstein/i-dont-need-your-love</loc>
+      <lastmod>2024-11-19</lastmod>
+      <priority>0.3</priority>
+      <changefreq>never</changefreq>
+   </url>
+   <url>
+      <loc>https://uppbeat.io/t/jonny-easton/dream-bird</loc>
+      <lastmod>2024-11-19</lastmod>
+      <priority>0.3</priority>
+      <changefreq>never</changefreq>
+   </url>
+   <url>
+      <loc>https://uppbeat.io/t/pryces/lateflights</loc>
+      <lastmod>2024-11-19</lastmod>
+      <priority>0.3</priority>
+      <changefreq>never</changefreq>
+   </url>
+</urlset>

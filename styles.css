@@ -1,0 +1,392 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 64px 80px;
+  background-color: #F2674A; /* Color por defecto */
+  font-family: 'Inter', sans-serif;
+  color: #FDF3F1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  transition: background-color 0.5s; /* Transición suave del color de fondo */
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 110px;
+}
+
+.pomodoro-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pomodoro-list li {
+  font-family: 'Inter', sans-serif;
+  text-align: right;
+}
+
+.used {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(29, 9, 5, 0.4);
+  text-decoration: line-through;
+}
+
+.live {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(29, 9, 5, 1);
+}
+
+.live::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('assets/arrow.png') no-repeat center center;
+  background-size: contain;
+}
+
+.coming {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(29, 9, 5, 1);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  text-align: center;
+}
+
+/* Estilos para el contador */
+.countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-section {
+  display: flex;
+}
+
+.digit {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 300px;
+  color: #1D0905;
+  line-height: 1;
+  position: relative;
+  overflow: hidden;
+  width: 230px;
+  height: 300px;
+}
+
+.digit span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.colon {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  font-size: 300px;
+  color: #1D0905;
+  line-height: 1;
+  margin: 0 10px;
+}
+
+.controls {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.button {
+  display: flex;
+  padding: 0.75rem 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  cursor: pointer;
+  border: none;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.button-primary {
+  background: #851801;
+  color: #F2674A;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 2px solid #851801;
+  color: #851801;
+}
+
+/* Estilos para el footer y controles */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.left-controls,
+.right-controls {
+  display: flex;
+  align-items: center;
+}
+
+.music-control,
+.fullscreen-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #851801; /* Color por defecto */
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.music-icon,
+.fullscreen-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.icon-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Estilos para las fases */
+
+/* Focus Phase */
+.phase-focus .button-primary {
+  background: #851801;
+  color: #F2674A;
+}
+
+.phase-focus .button-secondary {
+  border-color: #851801;
+  color: #851801;
+}
+
+.phase-focus .music-control,
+.phase-focus .fullscreen-control {
+  color: #851801;
+}
+
+/* Pause Phase */
+.phase-pause .button-primary {
+  background: #856001;
+  color: #F3CF77;
+}
+
+.phase-pause .button-secondary {
+  border-color: #856001;
+  color: #856001;
+}
+
+.phase-pause .music-control,
+.phase-pause .fullscreen-control {
+  color: #856001;
+}
+
+/* Long Pause Phase */
+.phase-long-pause .button-primary {
+  background: #01856D;
+  color: #77F3DC;
+}
+
+.phase-long-pause .button-secondary {
+  border-color: #01856D;
+  color: #01856D;
+}
+
+.phase-long-pause .music-control,
+.phase-long-pause .fullscreen-control {
+  color: #01856D;
+}
+
+/* Estilos para el botón "Restart" */
+.restart-button {
+  display: flex;
+  padding: 0.75rem 2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  cursor: pointer;
+  border: none;
+  background: #1D0905;
+  color: #77F3DC;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* Media Queries */
+
+/* Tablets (pantallas entre 768px y 1024px) */
+@media screen and (max-width: 1024px) {
+  body {
+    padding: 32px 40px;
+  }
+
+  .digit {
+    font-size: 200px;
+    width: 150px;
+    height: 200px;
+  }
+
+  .colon {
+    font-size: 200px;
+    margin: 0 5px;
+  }
+
+  .button {
+    font-size: 24px;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .used {
+    font-size: 14px;
+  }
+
+  .live {
+    font-size: 20px;
+  }
+  .coming {
+    font-size: 14px;
+  }
+}
+
+/* Móviles (pantallas de hasta 767px) */
+@media screen and (max-width: 767px) {
+  body {
+    padding: 32px 20px;
+  }
+
+  .digit {
+    font-size: 100px;
+    width: 75px;
+    height: 100px;
+  }
+
+  .colon {
+    font-size: 100px;
+    margin: 0 2px;
+  }
+
+  .button {
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pomodoro-list {
+    margin-top: 48px;
+    width: 100%;
+  }
+  .pomodoro-list li {
+    text-align: left;
+  }
+  .live {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .live::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('assets/arrow.png') no-repeat center center;
+    background-size: contain;
+  }
+
+
+  footer {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-controls {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .music-control,
+  .fullscreen-control {
+    font-size: 14px;
+  }
+
+  .music-icon,
+  .fullscreen-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 16px;
+  }
+}

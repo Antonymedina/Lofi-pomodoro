@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lofi Pomodoro - Boost Your Productivity with Lofi Music and Focus Timer</title>
+  <meta name="description" content="Stay productive with Lofi Pomodoro. Combine the Pomodoro technique with relaxing lofi music and an aesthetically pleasing interface. Perfect for students, freelancers, and remote workers.">
+  <meta name="keywords" content="Pomodoro timer, lofi music, productivity app, focus tool, time management">
+  <meta name="author" content="Antony C. Medina">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@900&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://www.lofipomodoro.com/">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Lofi Pomodoro",
+      "url": "https://www.lofipomodoro.com",
+      "description": "A web app that combines the Pomodoro technique with relaxing lofi music to boost focus and productivity.",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "All",
+      "creator": {
+        "@type": "Organization",
+        "name": "Lofi Pomodoro Team"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicRecording",
+        "name": "I Don't Need Your Love",
+        "byArtist": {
+          "@type": "MusicGroup",
+          "name": "Adi Goldstein"
+        },
+        "inAlbum": "Uppbeat Music",
+        "datePublished": "2023-01-01",
+        "license": "https://uppbeat.io/terms",
+        "url": "https://uppbeat.io/t/adi-goldstein/i-dont-need-your-love"
+      }
+      </script>
+      
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicRecording",
+        "name": "Dream Bird",
+        "byArtist": {
+          "@type": "MusicGroup",
+          "name": "Jonny Easton"
+        },
+        "inAlbum": "Uppbeat Music",
+        "datePublished": "2023-01-01",
+        "license": "https://uppbeat.io/terms",
+        "url": "https://uppbeat.io/t/jonny-easton/dream-bird"
+      }
+      </script>
+      
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MusicRecording",
+        "name": "Late Nights",
+        "byArtist": {
+          "@type": "MusicGroup",
+          "name": "Pryces"
+        },
+        "inAlbum": "Uppbeat Music",
+        "datePublished": "2023-01-01",
+        "license": "https://uppbeat.io/terms",
+        "url": "https://uppbeat.io/t/pryces/lateflights"
+      }
+      </script>      
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="assets/logo.png" alt="Lofi Pomodoro Logo" class="logo">
+      <ul class="pomodoro-list">
+        <li class="live">Focus</li>
+        <li class="coming">Pause</li>
+        <li class="coming">Focus</li>
+        <li class="coming">Pause</li>
+        <li class="coming">Focus</li>
+        <li class="coming">Pause</li>
+        <li class="coming">Focus</li>
+        <li class="coming">Long pause</li>
+      </ul>
+    </header>
+    <main>
+      <div class="timer">
+        <div class="countdown">
+          <div class="time-section minutes">
+            <div class="digit" id="minute-tens"><span>2</span></div>
+            <div class="digit" id="minute-units"><span>5</span></div>
+          </div>
+          <div class="colon">:</div>
+          <div class="time-section seconds">
+            <div class="digit" id="second-tens"><span>0</span></div>
+            <div class="digit" id="second-units"><span>0</span></div>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="start-btn" class="button button-primary">Start</button>
+          <button id="reset-btn" class="button button-secondary">Reset</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-controls">
+        <div class="left-controls">
+          <button id="music-btn" class="music-control">
+            <span id="song-status">Song paused</span>
+            <img id="music-icon" class="music-icon" src="assets/Play-focus.png" alt="Music Control">
+          </button>
+        </div>
+        <div class="right-controls">
+          <button id="fullscreen-btn" class="fullscreen-control">
+            <span id="fullscreen-status">Full Screen</span>
+            <img id="fullscreen-icon" class="fullscreen-icon" src="assets/Full-screen-focus.png" alt="Full Screen">
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
