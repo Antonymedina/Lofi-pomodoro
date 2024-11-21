@@ -34,6 +34,12 @@ const songs = [
   'songs/song6.mp3',
   'songs/song7.mp3',
   'songs/song8.mp3',
+  'songs/song9.mp3',
+  'songs/song10.mp3',
+  'songs/song11.mp3',
+  'songs/song12.mp3',
+  'songs/song13.mp3',
+  'songs/song14.mp3'
 ];
 
 function updateCountdownDisplay() {
